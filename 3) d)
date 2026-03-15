@@ -1,0 +1,18 @@
+import random
+
+c1 = 0
+c2 = 0
+meta = 100
+segundos = 0
+
+while c1 < meta and c2 < meta:
+    c1 += random.randint(1,10)
+    c2 += random.randint(1,10)
+    segundos += 1
+
+if c1 >= meta and c2 >= meta:
+    print("Empate en", segundos, "segundos")
+elif c1 >= meta:
+    print("Gano el corredor 1 en", segundos, "segundos")
+else:
+    print("Gano el corredor 2 en", segundos, "segundos")
