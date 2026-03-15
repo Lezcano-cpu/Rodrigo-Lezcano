@@ -1,0 +1,10 @@
+texto = input("Ingrese una cadena de texto: ")
+letra = input("Ingrese una letra: ")
+
+contador = 0
+
+for c in texto:
+    if c == letra:
+        contador += 1
+
+print("La letra aparece", contador, "veces")
