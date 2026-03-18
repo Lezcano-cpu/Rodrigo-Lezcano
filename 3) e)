@@ -1,0 +1,11 @@
+producto = 1
+
+while True:
+    num = int(input("Ingrese un número entero (negativo para terminar): "))
+
+    if num < 0:
+        break
+
+    producto *= num
+
+print("El producto total es:", producto)
