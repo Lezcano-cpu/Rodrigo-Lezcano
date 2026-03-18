@@ -1,0 +1,5 @@
+numeros = list(map(int, input("Ingrese números enteros separados por espacio: ").split()))
+
+suma = sum(numeros)
+
+print("La suma de los elementos es:", suma)
