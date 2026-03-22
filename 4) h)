@@ -1,0 +1,34 @@
+import random
+
+# Lista de palabras
+palabras = ["python", "computadora", "programacion", "teclado", "pantalla"]
+
+# Elegir palabra aleatoria
+palabra = random.choice(palabras)
+
+# Crear lista con guiones bajos
+oculta = ["_"] * len(palabra)
+
+print("Adiviná la palabra:")
+print(" ".join(oculta))
+
+# Mientras haya letras ocultas
+while "_" in oculta:
+    letra = input("Ingresá una letra: ").lower()
+
+    if len(letra) != 1:
+        print("Ingresá solo una letra")
+        continue
+
+    if letra in palabra:
+        # Revelar todas las posiciones correctas
+        for i in range(len(palabra)):
+            if palabra[i] == letra:
+                oculta[i] = letra
+        print("¡Correcto!")
+    else:
+        print("Letra incorrecta")
+
+    print(" ".join(oculta))
+
+print("¡Ganaste! La palabra era:", palabra)
