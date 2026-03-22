@@ -1,0 +1,29 @@
+import random
+import time
+
+
+n = int(input("¿Cuántos números querés memorizar?: "))
+numeros = [random.randint(1, 9) for _ in range(n)]
+
+
+print("Memorizá estos números:")
+print(numeros)
+
+time.sleep(3)
+
+print("\n" * 50)
+
+print("Ahora ingresá los números en el mismo orden:")
+
+correcto = True
+
+for i in range(n):
+    intento = int(input(f"Número {i+1}: "))
+    if intento != numeros[i]:
+        correcto = False
+
+if correcto:
+    print("¡Ganaste!")
+else:
+    print("Perdiste")
+    print("La secuencia era:", numeros)
