@@ -1,0 +1,18 @@
+
+n = int(input("¿Cuántos números vas a ingresar?: "))
+
+numeros = []
+
+
+for i in range(n):
+    num = int(input(f"Ingresá el número {i+1}: "))
+    numeros.append(num)
+
+
+suma = sum(numeros)
+
+
+promedio = suma / n
+
+
+print("La media (promedio) es:", promedio)
