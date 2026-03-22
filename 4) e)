@@ -1,0 +1,18 @@
+
+n = int(input("¿Cuántos números vas a ingresar?: "))
+
+numeros = []
+
+
+for i in range(n):
+    num = int(input(f"Ingresá el número {i+1}: "))
+    numeros.append(num)
+
+
+contador_pares = 0
+for num in numeros:
+    if num % 2 == 0:
+        contador_pares += 1
+
+
+print("Cantidad de números pares:", contador_pares)
